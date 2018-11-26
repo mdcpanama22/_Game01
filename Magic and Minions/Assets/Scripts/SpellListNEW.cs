@@ -17,7 +17,7 @@ public class SpellListNew : MonoBehaviour {
 		string[] fileData = ReadFile("Assets/Resources/Spells.txt", '\n');
 		string[] spellData = new string[0];
 		for(int i=0; i<fileData.Length; i++){
-			if(fileData[i][0]!='/'){
+			if(fileData[i][0]!='/' || fileData[i][1]!='/'){
 				spellData = fileData[i].Split('-');
 				spells.Add(new SpellNew(spellData[0], spellData[1], spellData[2].Split(','), spellData[3].Split(',')));
 			}

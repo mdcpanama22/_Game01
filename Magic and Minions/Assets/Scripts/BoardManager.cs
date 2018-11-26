@@ -15,10 +15,7 @@ public class BoardManager : MonoBehaviour {
     {"Damage", Damage}, {"Heal", Heal}, {"Push", Push}, {"Armor", Summon}, {"Gain", Gain}
 	};
 	
-	private void CallDelegate(string s){
-		actions[s].Invoke(Int32.Parse(nextAction[1]), Int32.Parse(nextAction[2]), Int32.Parse(nextAction[3]));
-	}
-	
+
 	// Use this for initialization
 	void Start () {
 		
@@ -27,6 +24,7 @@ public class BoardManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		nextAction = actionsToBeDone.Dequeue().Split('/');
+		actions[nextAction[0]].Invoke(Int32.Parse(nextAction[1]), Int32.Parse(nextAction[2]), Int32.Parse(nextAction[3]));
 	}
 	
 	private static void Damage(int x, int y, int n){
