@@ -1,0 +1,4 @@
+//all spells should be formatted like this:
+//Spell Name-Description-Resource Cost,Resource Cost,...-Action
+//Ex: Fireball-Launch a giant ball of fire-1Mana,1Solar-Damage/4/0/0,Push/1/1/0
+//

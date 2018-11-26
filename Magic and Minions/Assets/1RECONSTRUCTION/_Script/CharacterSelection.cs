@@ -9,12 +9,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class _CharacterSelection : MonoBehaviour {
+public class CharacterSelection : MonoBehaviour {
 	public int num, np1, np2;
 	
 	public Text P1, P2, SpellD;
 	
-	public GameObject NumberofPlayers, CharSelection, SpellSelection, SpellSelection2, Undo_b, Ready_G, Ready_b, Ready_b2, Description_b, Beserker, Necro, ClassTemp, ALLSPELLS, Character_Select_Menu;
+	public GameObject NumberofPlayers, CharSelection, SpellSelection, Undo_b, Ready_G, Ready_b, Ready_b2, Description_b, Necro, ClassTemp, ALLSPELLS, Character_Select_Menu;
 	//public GameObject GM;
 	
 	public string SpellName;
@@ -37,18 +37,12 @@ public class _CharacterSelection : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start(){
-		num = 0; // player count
-		np1 = 0;
-		np2 = 0;
-		state_ = 0;
-		_spellDescription = 0; //0 == false 1 == true this is for the spell description
 		NumberofPlayers.SetActive(true);
 		CharSelection.SetActive(false);
 		SpellSelection.SetActive(false);
 
 		SpellSelectionList = new List<GameObject>(){
-			SpellSelection,
-			SpellSelection2
+			SpellSelection
 		};
 
 		P1.gameObject.SetActive(true);
