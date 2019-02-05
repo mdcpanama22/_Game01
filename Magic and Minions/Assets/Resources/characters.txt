@@ -1,0 +1,4 @@
+NECROMANCER|apples
+BERSERKER|string
+WINDGUY|cheese
+MANCER|stringagain

@@ -18,6 +18,7 @@ TagManager:
   - manaslider
   - Beserker
   - Spell
+  - Board
   layers:
   - Default
   - TransparentFX

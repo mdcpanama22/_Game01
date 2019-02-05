@@ -1,4 +1,37 @@
 //all spells should be formatted like this:
 //Spell Name-Description-Resource Cost,Resource Cost,...-Action
 //Ex: Fireball-Launch a giant ball of fire-1Mana,1Solar-Damage/4/0/0,Push/1/1/0
-//
+//Barbarian
+////Minions
+Drunkard-Summon a 2 Damage, 4 Health Drunkard, for 2 Mana-2Mana-Summon/0/0/Drunkard.prefab
+Mana Wisp-Summon a 1 Damage, 3 Health Mana Wisp, for 5 Mana. Gain 1 mana at the end of your turn-5Mana-Summon/0/0/Mana Wisp.prefab
+Orcish Grunt-Summon a 2 Damage, 3 Health Orcish Grunt, for 3 Mana. Can attack twice-3Mana-Summon/0/0/Orcish Grunt.prefab
+////Spells
+Blink-Teleport 1 + (rage) spaces, for 3 Mana-3Mana-Push/1/1/0
+Chug-Gain 4 Mana or 1 Rage, but no longer can take an action--Gain/1/0/0,Gain/4/0/0
+Drunken Cleave-Stagger 2 spaces, then deal 3 damage to 2 continious adjacent spaces, for 4 Mana-4Mana-Push/1/0/0,Damage/3/0/0
+Molotov Throw-Deal 4 damage to target space within a range of 2, dealing 4 damage to chosen space, and 1 to the spaces around, for 5 Mana-5Mana-Damage/0/0/0
+Painkiller-Restore 4 hp to Berserker, for 4 mana or 1 rage-4Mana,1Rage-Heal/4/0/0
+Vanish-Teleport to a square 3 spaces away, for 1 essence-1Essence-Push/1/0/0
+Vicious Cleave-Deal 6 damage to two adjacent units, and gain one rage per kill, for 7 Mana or 5 Rage-7Mana,5Rage-Damage/6/0/0,Gain/1/0/0
+////Passives
+Arcane Blood-Berserker gains 1 mana after each melee attack, and after every time Berserker moves, deal 1 damage to up to 2 adjacent units--Gain/1/0/0,Damage/1/0/0
+Bloodfury-Bloodfury, gain 1 rage for every kill your hero makes with melee attacks or spells--Gain/1/0/0
+Stagger-Stagger, ever time you cast a spell, you must stagger 1 space before casting--Push/1/0/0
+Superstitious-Heal 2 health when targeted by any spell--Heal/2/0/0
+//Necromancer
+////Minions
+Wisp-Summon 1 damage, 2 health Wisp with 2 moves, for 1 Mana-1Mana-Summon/0/0/Wisp.prefab
+Skeleton-Summon 3 damage, 2 health Skeleton, for 2 Mana-2Mana-Summon/0/0/Skeleton.prefab
+Wraith-Summon 3 damage, 4 health Wraith, for 3 Mana-3Mana-Summon/0/0/Wraith.prefab
+////Spells
+Possession-Pay life equal to a minion’s hp to take control of it, for 2 Mana-2Mana-Damage/x/0/0
+Soul Swarm-Summon 4 wisps adjacent to the Necromancer and deal 3 damage to the Necromancer-3Health-Summon/0/0/Wisp.prefab
+Soul Inhale-Deal 2 damage in a right cone of radius 2, heal Necromancer for half damage dealt-1Shadow-Damage/0/0/0
+Dark Monolith-Place a 5 health, monolith which generates 1 shadow for the Necromancer each turn-1Mana-Summon/0/0/0
+Energy_Sling-Kill a friendly minion to teleport up to its hp in spaces away-1Mana-Push/0/0/0
+Essence Projection-Destroy a friendly minion to deal its damage to one target within 2 spaces of it, for 2 mana or 1 shadow-2mana-0/0/0/0
+Soul Rot-Deal 4 damage to target and 2 to Necromancer-2Health-Damage/0/0/0
+////Passives
+Plague-Minions that you kill rise again as zombies and have damage and hp reduced by 50%--Summon/0/0/x
+Rising Darkness-Rising Darkness, friendly zombies gain + 1/4 damage and + 1/2 hp for each shadow Necromancer has when they rise--Gain/0/0/0
