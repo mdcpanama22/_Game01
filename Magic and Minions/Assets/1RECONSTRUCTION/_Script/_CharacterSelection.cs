@@ -45,7 +45,7 @@ public class _CharacterSelection : MonoBehaviour {
 
     public Camera CameraMovement;
 
-    private int _spellDescription;
+    private bool _spellDescription;
     //Camera Movement
     IEnumerator StartMatch()
     {
@@ -58,7 +58,7 @@ public class _CharacterSelection : MonoBehaviour {
         np1 = 0;
         np2 = 0;
         state_ = 0;
-        _spellDescription = 0; //0 == false 1 == true this is for the spell description
+        _spellDescription = true; 
         NumberofPlayers.SetActive(true);
         CharSelection.SetActive(false);
         SpellSelection.SetActive(false);
@@ -80,6 +80,8 @@ public class _CharacterSelection : MonoBehaviour {
                 SpellSelectionSelector();
                 state_++;
             }
+
+            //DIALOUGE RELATED UI 
             if (state_ == 0)
             {
                 P1.text = "How many players are playing?";
@@ -198,7 +200,7 @@ public class _CharacterSelection : MonoBehaviour {
     //Basic Spell Commands for Description
     public void SpellDesciption()
     {
-        _spellDescription = 1;
+        _spellDescription = true;
         foreach (SpellList.Tag T in ALLSPELLS.GetComponent<SpellList>().ALLSPELLS)
         {
             if(GM.instance.Players[np1].Character.tag == T.tag)
@@ -210,7 +212,7 @@ public class _CharacterSelection : MonoBehaviour {
                         SpellImage = S.Spell_Image;
                         SpellDescription(S);
                         Description(Description_b.transform.childCount);
-                        _spellDescription = 0;
+                        _spellDescription = false;
                     }
                 }
             }
@@ -291,7 +293,7 @@ public class _CharacterSelection : MonoBehaviour {
     {
         for (int i = 0; i < total; i++)
         {
-            if (_spellDescription == 1)
+            if (!_spellDescription)
             {
                 if ("Spell" == Description_b.transform.GetChild(i).tag)
                     Description_b.transform.GetChild(i).gameObject.SetActive(true);

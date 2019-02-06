@@ -69,6 +69,7 @@ public struct SpellButtons
 public class GM : MonoBehaviour
 {
     public static GM instance = null;
+
     public int turn = 0;
     public GameObject First;
     public int x = 8;
@@ -105,6 +106,8 @@ public class GM : MonoBehaviour
     {
         return AmountofPlayers;
     }
+    /* intializes the Global Script*/
+
     private void Awake()
     {
         if (instance == null)
@@ -117,6 +120,8 @@ public class GM : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+
+
 
     public List<List<GameObject>> InitializeLocations(GameObject p)
     {
@@ -310,6 +315,16 @@ public class GM : MonoBehaviour
                         /*
                          * 
                          * Gets all the locations except for the actual players or spaces
+                         * 
+                         * 
+                         * Everything you can do will affect everyone around you
+                         * 
+                         * group heal, heals everyone around you 
+                         * aoe attack, attacks everyone 
+                         * 
+                         * exceptions:
+                         *  >Spells that sacrifice your own minions
+                         *  
                          * 
                          * Example:
                          * 

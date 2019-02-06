@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114688226852555820}
   - component: {fileID: 114621236097493608}
   - component: {fileID: 136797122147396598}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Necromancer
   m_TagString: Necro
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 37c3df07c60929f4886d50d39a101606, type: 2}
+  - {fileID: 2100000, guid: a531b87f3b4ea944c8d74bf206d322bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
